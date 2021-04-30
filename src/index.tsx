@@ -1,16 +1,11 @@
 import React from "react"
 import ReactDOM from "react-dom"
-import { CssBaseline, ThemeProvider } from "@material-ui/core"
-import theme from "./utils/theme"
 import App from "./App"
 import reportWebVitals from "./reportWebVitals"
 
 ReactDOM.render(
   <React.Fragment>
-    <ThemeProvider theme={theme}>
-      <CssBaseline />
-      <App />
-    </ThemeProvider>
+    <App />
   </React.Fragment>,
   document.getElementById("root")
 )

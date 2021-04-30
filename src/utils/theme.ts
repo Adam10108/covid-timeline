@@ -1,14 +1,22 @@
 import { createMuiTheme } from "@material-ui/core"
 import createBreakpoints from "@material-ui/core/styles/createBreakpoints"
+import { colors } from "../utils/styles"
 
 const breakpoints = createBreakpoints({})
+const fonts: any = ["Prompt", "sans-serif"]
 
 export default createMuiTheme({
-  typography: {
-    button: {
-      fontWeight: "bold",
-      textTransform: "none",
+  palette: {
+    type: "light",
+    primary: {
+      main: colors.amber,
     },
+    background: {
+      default: colors.midnightBlue,
+    },
+  },
+  typography: {
+    fontFamily: fonts,
     h1: {
       fontSize: "40px",
       [breakpoints.down("xs")]: {
