@@ -2,7 +2,10 @@ import { Box, Container, Grid, Theme, Typography } from "@material-ui/core"
 import { makeStyles } from "@material-ui/core/styles"
 import { useStyles } from "../utils/styles"
 
-import { FormPatientInformation } from "../components/patient"
+import {
+  FormPatientInformation,
+  FormTimelineInformation,
+} from "../components/patient"
 
 const customStyles = makeStyles((theme: Theme) => ({
   titleBox: {
@@ -28,9 +31,11 @@ const CovidTimeline = (): JSX.Element => {
 
       <div className={classes.spacer}></div>
 
-      <Grid container>
+      <Grid container spacing={4}>
         <Grid item xs={12} sm={4}>
           <FormPatientInformation />
+          <div className={classes.spacer}></div>
+          <FormTimelineInformation />
         </Grid>
         <Grid item xs={12} sm={8}>
           Timeline
