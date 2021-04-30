@@ -13,6 +13,7 @@ export default createMuiTheme({
     },
     background: {
       default: colors.midnightBlue,
+      paper: "#FFFFFF",
     },
   },
   typography: {
@@ -51,6 +52,29 @@ export default createMuiTheme({
       fontSize: "14px",
       [breakpoints.down("xs")]: {
         fontSize: "12px",
+      },
+    },
+  },
+  overrides: {
+    MuiInputBase: {
+      input: {
+        background: "#FFFFFF",
+      },
+    },
+    MuiSelect: {
+      select: {
+        "&:focus": {
+          backgroundColor: "#FFFFFF",
+        },
+      },
+    },
+    MuiMenuItem: {
+      root: {
+        background: "#FFFFFF",
+
+        "&$selected": {
+          background: "#FFFFFF",
+        },
       },
     },
   },
