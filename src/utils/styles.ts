@@ -17,6 +17,15 @@ export const useStyles = makeStyles((theme: Theme) => ({
   mt2: {
     marginTop: theme.spacing(2),
   },
+  mr1: {
+    marginRight: theme.spacing(1),
+  },
+  mr2: {
+    marginRight: theme.spacing(2),
+  },
+  mr3: {
+    marginRight: theme.spacing(3),
+  },
   spacerXs: {
     height: theme.spacing(2),
   },
@@ -25,6 +34,15 @@ export const useStyles = makeStyles((theme: Theme) => ({
   },
   spacerMd: {
     height: theme.spacing(4),
+  },
+  textCenter: {
+    textAlign: "center",
+  },
+  textWhite: {
+    color: "#FFFFFF",
+  },
+  textHeathe: {
+    color: colors.heathe,
   },
   textAmber: {
     color: colors.amber,

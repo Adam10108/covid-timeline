@@ -6,6 +6,7 @@ import {
   FormPatientInformation,
   FormTimelineInformation,
 } from "../components/patient"
+import Timeline from "../components/Timeline"
 
 const customStyles = makeStyles((theme: Theme) => ({
   titleBox: {
@@ -38,7 +39,7 @@ const CovidTimeline = (): JSX.Element => {
           <FormTimelineInformation />
         </Grid>
         <Grid item xs={12} sm={8}>
-          Timeline
+          <Timeline />
         </Grid>
       </Grid>
     </Container>
