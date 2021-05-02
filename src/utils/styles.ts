@@ -1,5 +1,5 @@
-import { Theme } from "@material-ui/core"
-import { makeStyles } from "@material-ui/core/styles"
+import { TextField, Theme, InputLabel, Paper } from "@material-ui/core"
+import { makeStyles, withStyles } from "@material-ui/core/styles"
 
 export const colors = {
   midnightBlue: "#012d5e",
@@ -11,6 +11,21 @@ export const colors = {
 }
 
 export const useStyles = makeStyles((theme: Theme) => ({
+  mt1: {
+    marginTop: theme.spacing(1),
+  },
+  mt2: {
+    marginTop: theme.spacing(2),
+  },
+  mr1: {
+    marginRight: theme.spacing(1),
+  },
+  mr2: {
+    marginRight: theme.spacing(2),
+  },
+  mr3: {
+    marginRight: theme.spacing(3),
+  },
   spacerXs: {
     height: theme.spacing(2),
   },
@@ -20,7 +35,49 @@ export const useStyles = makeStyles((theme: Theme) => ({
   spacerMd: {
     height: theme.spacing(4),
   },
+  textCenter: {
+    textAlign: "center",
+  },
+  textWhite: {
+    color: "#FFFFFF",
+  },
+  textHeathe: {
+    color: colors.heathe,
+  },
   textAmber: {
     color: colors.amber,
   },
+  textForestGreen: {
+    color: colors.forestGreen,
+  },
 }))
+
+export const PaperStyled = withStyles((theme: Theme) => ({
+  root: {
+    borderRadius: 4,
+    padding: "20px 18px",
+    backgroundColor: colors.astronaut,
+  },
+}))(Paper)
+
+export const LabelStyled = withStyles((theme: Theme) => ({
+  root: {
+    color: colors.heathe,
+    fontSize: "14px",
+    [theme.breakpoints.down("xs")]: {
+      fontSize: "12px",
+    },
+  },
+}))(InputLabel)
+
+export const TextFieldStyled = withStyles({
+  root: {
+    width: "100%",
+
+    "& .MuiOutlinedInput-root": {
+      "& fieldset": {
+        borderColor: "#FFFFFF",
+      },
+    },
+  },
+})(TextField)
